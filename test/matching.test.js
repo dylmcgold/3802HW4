@@ -54,10 +54,10 @@ const FIXTURE = {
         good: ['(**)', '(*  *)', '(*756****)', '(*****)', '(*(*(******9*)'],
         bad: ['', '(*)', '(**', 'dog', '(* before (* inner *) after *)', '(* extra space *) '],
       },
-    //   notFileForFirstNoLookAround: {
-    //     good: ['', 'files', 'fors', 'FOR', 'thefirst', 'afile', 'fork', 'fILE', 'fifor'],
-    //     bad: ['file', 'for', 'first'],
-    //   },
+      notFileForFirstNoLookAround: {
+        good: ['', 'files', 'fors', 'FOR', 'thefirst', 'afile', 'fork', 'fILE', 'fifor'],
+        bad: ['file', 'for', 'first'],
+      },
   cOctal: {
     good: ['0', '027', '0777', '07766554433221100', '000000'],
     bad: ['08', '099', '100', '777', '011542651234612487236'],
@@ -77,14 +77,14 @@ const FIXTURE = {
         ],
         bad: ['', 'dog', '3.1E9012', '22.3221E', '2e'],
       },
-    //   palindrome2358: {
-    //     good: ['ππ', '©&©', '0@∂@0', '🔭ñabbañ🔭'],
-    //     bad: ['Російський', 'військовий', 'корабель', 'A', 'BBBB', '#$%%$#'],
-    //   },
-    //   noNegativeIntLits: {
-    //     good: ['12', '7 dogs', 'I have 8 rats', 'Got response 404', 'hAx0r', 'What is 2-3?'],
-    //     bad: ['', '-3', 'Shoot it was -16', '-2-2-2-2-2', '-420', 'A -300 A'],
-    //   },
+      palindrome2358: {
+        good: ['ππ', '©&©', '0@∂@0', '🔭ñabbañ🔭'],
+        bad: ['Російський', 'військовий', 'корабель', 'A', 'BBBB', '#$%%$#'],
+      },
+      noNegativeIntLits: {
+        good: ['12', '7 dogs', 'I have 8 rats', 'Got response 404', 'hAx0r', 'What is 2-3?'],
+        bad: ['', '-3', 'Shoot it was -16', '-2-2-2-2-2', '-420', 'A -300 A'],
+      },
       repeated: {
         good: ['badbad', '', 'wootwoot', 'bebe', 'swooshswoosh'],
         bad: ['aba', 'zzyzz', 'ABAB', 'ZooZ', '123123'],
@@ -92,7 +92,7 @@ const FIXTURE = {
 }
 
 // Looks funny, but you can probably figure out what it does
-//FIXTURE.notFileForFirstWithLookAround = FIXTURE.notFileForFirstNoLookAround
+FIXTURE.notFileForFirstWithLookAround = FIXTURE.notFileForFirstNoLookAround
 
 for (let name of Object.keys(FIXTURE)) {
   describe(`When matching ${name}`, () => {

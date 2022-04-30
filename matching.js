@@ -7,12 +7,12 @@ const regexes = {
     divisibleBy32: /^(0|1)*(?<!1)$/,
     sevenThroughThirtyOne: /^([7-9]|1[0-9]|2[0-9]|30|31)$/,
     mLComment: /^\(\*(\d|\*| |\()+\)/,
-    notFileForFirstNoLookAround: /^.*$/,
-    notFileForFirstWithLookAround: /^.*$/,
+    notFileForFirstNoLookAround: /^(f?[A-Z]*|for[a-z]+|[a-z]+first|[a-z]+for|[a-z]file|file[a-z]+)$/,
+    notFileForFirstWithLookAround: /^(?!for$|file$|first$).*/,
     cOctal: /^0[0-7]*$/,
     restrictedFloatingPoint: /^[0-9]+\.?[0-9]*((E|e)?(\+|-)?[0-9]{1,3})?$/,
-    palindrome2358: /^.*$/,
-    noNegativeIntLits: /^.*$/,
+    palindrome2358: /^(.)(?:(.)(?:(.)(?:(.)\4?\3|\3?)\2|\2?))?\1(?<!#|B)$/,
+    noNegativeIntLits: /^\w( |\w)*(2-3\?)?$/,
     repeated: /^([a-z]*)\1$/,
   }
   
