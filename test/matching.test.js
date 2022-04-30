@@ -44,16 +44,16 @@ const FIXTURE = {
         good: ['0', '00', '000', '00000', '00000', '000000', '00000000', '110100000', '10010101000000'],
         bad: ['1', '0000000010000', '1000000001', 'dog0000000', '200000'],
       },
-    //   sevenThroughThirtyOne: {
-    //     good: Array(24)
-    //       .fill(0)
-    //       .map((x, i) => i + 7),
-    //     bad: ['1', '0', '00003', 'dog', '', '361', '90', '6', '-11', '32', '123z'],
-    //   },
-    //   mLComment: {
-    //     good: ['(**)', '(*  *)', '(*756****)', '(*****)', '(*(*(******9*)'],
-    //     bad: ['', '(*)', '(**', 'dog', '(* before (* inner *) after *)', '(* extra space *) '],
-    //   },
+      sevenThroughThirtyOne: {
+        good: Array(24)
+          .fill(0)
+          .map((x, i) => i + 7),
+        bad: ['1', '0', '00003', 'dog', '', '361', '90', '6', '-11', '32', '123z'],
+      },
+      mLComment: {
+        good: ['(**)', '(*  *)', '(*756****)', '(*****)', '(*(*(******9*)'],
+        bad: ['', '(*)', '(**', 'dog', '(* before (* inner *) after *)', '(* extra space *) '],
+      },
     //   notFileForFirstNoLookAround: {
     //     good: ['', 'files', 'fors', 'FOR', 'thefirst', 'afile', 'fork', 'fILE', 'fifor'],
     //     bad: ['file', 'for', 'first'],
